@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio ALEX_DEV — Full-Stack Developer & Cybersecurity Expert">
+  <!-- Baseline CSP via meta (utile en dev). Configure CSP via en-têtes HTTP côté serveur pour être pleinement efficace. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>ALEX_DEV — Portfolio Neon Tech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Skip link pour accessibilité clavier -->
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <div class="nav-inner">
+        <a class="nav-brand" href="#home" aria-label="Aller à l'accueil">ALEX_DEV</a>
+
+        <!-- bouton burger accessible -->
+        <button class="nav-toggle" id="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <ul id="primary-navigation" class="nav-menu" hidden>
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero / titre principal (un seul H1) -->
+    <section id="home" class="hero" aria-label="Présentation">
+      <div class="hero-content">
+        <h1 class="hero-title">ALEX_DEV</h1>
+        <p class="hero-subtitle">// Full-Stack Developer & Cybersecurity Expert</p>
+        <div class="hero-buttons">
+          <a class="neon-btn" href="#projects">Voir les projets</a>
+          <a class="neon-btn secondary" href="#contact">Contacter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About (article) -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title">À propos</h2>
+      <article class="terminal-section" aria-label="Présentation en style terminal">
+        <header class="terminal-header">
+          <div class="terminal-dots" aria-hidden="true">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <h3 class="terminal-title">alex@portfolio ~ about_me.sh</h3>
+        </header>
+
+        <div class="terminal-content">
+          <p><span class="prompt">alex@portfolio:~$</span> <span class="command">whoami</span></p>
+          <p class="output">Senior Full-Stack Developer with 7+ years experience</p>
+          <p class="output">Specializing in Web3, Blockchain & Cybersecurity</p>
+          <p><span class="prompt">alex@portfolio:~$</span> <span class="command">echo "Innovation is my fuel 🚀"</span></p>
+          <p class="output">Innovation is my fuel 🚀</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Compétences</h2>
+      <div class="skills-grid">
+        <article class="skill-card" aria-labelledby="skill-python">
+          <span class="skill-icon" aria-hidden="true">🐍</span>
+          <h3 id="skill-python" class="skill-name">Python & Django</h3>
+          <p class="skill-description">Backend, API, data & ML.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-95" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" aria-label="Niveau 95 pour Python & Django"></div>
+          </div>
+          <p class="skill-percentage">95%</p>
+        </article>
+
+        <article class="skill-card" aria-labelledby="skill-js">
+          <span class="skill-icon" aria-hidden="true">⚡</span>
+          <h3 id="skill-js" class="skill-name">JavaScript & Node.js</h3>
+          <p class="skill-description">Full-stack JS: React, Vue, Node.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-92" role="progressbar" aria-valuenow="92" aria-label="Niveau 92 pour JavaScript & Node.js"></div>
+          </div>
+          <p class="skill-percentage">92%</p>
+        </article>
+
+        <article class="skill-card" aria-labelledby="skill-blockchain">
+          <span class="skill-icon" aria-hidden="true">🔗</span>
+          <h3 id="skill-blockchain" class="skill-name">Blockchain</h3>
+          <p class="skill-description">Smart contracts, DeFi, Solidity.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-88" role="progressbar" aria-valuenow="88" aria-label="Niveau 88 pour Blockchain"></div>
+          </div>
+          <p class="skill-percentage">88%</p>
+        </article>
+
+        <article class="skill-card" aria-labelledby="skill-sec">
+          <span class="skill-icon" aria-hidden="true">🛡️</span>
+          <h3 id="skill-sec" class="skill-name">Cybersecurity</h3>
+          <p class="skill-description">Pentest, audits, secure coding.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-90" role="progressbar" aria-valuenow="90" aria-label="Niveau 90 pour Cybersecurity"></div>
+          </div>
+          <p class="skill-percentage">90%</p>
+        </article>
+
+        <article class="skill-card" aria-labelledby="skill-cloud">
+          <span class="skill-icon" aria-hidden="true">☁️</span>
+          <h3 id="skill-cloud" class="skill-name">DevOps & Cloud</h3>
+          <p class="skill-description">AWS, Docker, K8s, CI/CD.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-85" role="progressbar" aria-valuenow="85" aria-label="Niveau 85 pour DevOps & Cloud"></div>
+          </div>
+          <p class="skill-percentage">85%</p>
+        </article>
+
+        <article class="skill-card" aria-labelledby="skill-sys">
+          <span class="skill-icon" aria-hidden="true">🦀</span>
+          <h3 id="skill-sys" class="skill-name">Rust & Go</h3>
+          <p class="skill-description">Systems programming & microservices.</p>
+          <div class="skill-level" aria-hidden="true">
+            <div class="skill-progress progress-78" role="progressbar" aria-valuenow="78" aria-label="Niveau 78 pour Rust & Go"></div>
+          </div>
+          <p class="skill-percentage">78%</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Projets</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-image" aria-hidden="true"></div>
+          <div class="project-info">
+            <h3 class="project-title">CyberGuard AI</h3>
+            <p class="project-description">Détection d'intrusions en temps réel par IA.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a class="project-link" href="#" rel="noopener noreferrer">Live Demo</a>
+              <a class="project-link" href="#" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Autres projets... -->
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Contact</h2>
+
+      <form class="contact-form" method="POST" action="/contact" novalidate>
+        <!-- Honeypot anti-spam (ne pas afficher; laisser hors écran pour ne pas être "display: none") -->
+        <label class="visually-hidden" for="hp">Ne pas remplir</label>
+        <input id="hp" name="hp" type="text" class="hp-field" autocomplete="off" tabindex="-1" />
+
+        <label for="name" class="form-label">Nom</label>
+        <input id="name" name="name" type="text" class="form-input" autocomplete="name" required>
+
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="email" class="form-input" autocomplete="email" required>
+
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+
+        <button type="submit" class="neon-btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <nav class="social-links" aria-label="Liens sociaux">
+      <a class="social-link" href="#" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
+      <a class="social-link" href="#" rel="noopener noreferrer" aria-label="LinkedIn">💼</a>
+      <a class="social-link" href="#" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+    </nav>
+    <p class="footer-text">© <span id="year"></span> ALEX_DEV. Tous droits réservés.</p>
+  </footer>
+
+  <noscript>
+    <p class="no-js">JavaScript est nécessaire pour une meilleure expérience (menu mobile, animations). Le contenu reste accessible.</p>
+  </noscript>
+</body>
+</html>
